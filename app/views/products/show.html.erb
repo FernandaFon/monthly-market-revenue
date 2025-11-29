@@ -1,5 +1,8 @@
-<div>
-    <%= @product.name %>
-    <%= @product.price %>
-    <%= @product.quantity %>
+<div><%= @product.name %></div>
+<div><%= @product.price %></div>
+<div><%= @product.quantity %></div>
+<div> 
+    <form action="/products/#@{product.id}" method="delete">
+        <button type="submit">apagar produto</button>
+    </form>
 </div>

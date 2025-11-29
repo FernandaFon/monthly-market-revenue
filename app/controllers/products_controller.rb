@@ -11,6 +11,11 @@ class ProductsController < ApplicationController
        @products = Product.all
     end
 
+    def destroy
+        product = Product.find(params[:id])
+        product.destroy
+    end
+
     def create
         @product = Product.new(name: params[:name], price: params[:price], quantity: params[:quantity])
         if @product.save
