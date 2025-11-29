@@ -7,6 +7,10 @@ class ProductsController < ApplicationController
         @product = Product.new
     end
 
+    def index
+       @products = Product.all
+    end
+
     def create
         @product = Product.new(name: params[:name], price: params[:price], quantity: params[:quantity])
         if @product.save
